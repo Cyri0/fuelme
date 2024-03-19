@@ -1,3 +1,68 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background-color: green;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #FAFAFA;
+}
+
+#consumption{
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+#consumption::after{
+    content: 'l/100km';
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    bottom: 0;
+    background: black;
+    padding: 5px 10px;
+}
+
+#refuels{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#refuels>div{
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+#refuels>div::after{
+    content: 'tankolás';
+    color: white;
+    width: 100px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.24);
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    rotate: 45deg;
 }

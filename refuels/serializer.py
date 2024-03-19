@@ -5,3 +5,4 @@ class RefuelSerializer(ModelSerializer):
     class Meta:
         model = Refuel
         fields = '__all__'
+        depth = 1
